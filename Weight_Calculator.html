@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<title>Weight Calculator</title>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+		<link href="https://fonts.googleapis.com/css2?family=Sansita+Swashed:wght@300&display=swap" rel="stylesheet">
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/css/bootstrap.min.css">
+		<script>
+	function display(){
+		
+		let a = document.getElementById("a1").value;
+		let b = document.getElementById("a2").value;
+		let c;
+		if(b =='Earth')
+			{
+				c = a * 1;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Jupiter')
+			{
+				c = a * 2.34;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Mercury')
+			{
+				c = a * 0.38;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Venus')
+			{
+				c = a * 0.91;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Mars')
+			{
+				c = a * 0.38;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Sun')
+			{
+				c = a * 27.07;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Saturn')
+			{
+				c = a * 1.06;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Neptune')
+			{
+				c = a * 1.19;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Uranus')
+			{
+				c = a * 0.92;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Pluto')
+			{
+				c = a * 0.06;
+				document.getElementById("a3").value=c;			
+			}
+		if(b =='Moon')
+			{
+				c = a * 0.166;
+				document.getElementById("a3").value=c;			
+			}
+
+	}
+	</script>
+	<style>
+		html,body{
+			height: 100%;
+			width: 100%;
+			margin: 0;
+			padding: 0;
+			font-family: cursive;
+			font-size: 20px;
+			animation-name: anim;
+			animation-duration: 10s;
+			animation-iteration-count: infinite;
+			animation-direction: alternate;
+			background: linear-gradient(360deg,red,yellow,green);
+
+		}
+		h1{
+				font-family: 'Sansita Swashed', cursive;
+				font-size: 40px;
+				font-weight: bold;
+				text-align: center;
+			}
+
+		input{
+			border-radius: 7px;
+			margin: 4px;
+			padding: 1px;
+		}
+		#a2{
+			border-radius: 7px;
+		}
+		#a3{
+			padding: 5px;
+		}
+		h2{
+			text-decoration: underline;
+			color: white;
+/*			font-size: 25px;*/
+			text-align: center;
+		}
+		*{
+			text-align: center;
+		}
+		 @keyframes anim{
+			 0%{
+				 filter: hue-rotate(0deg);
+			 }
+			 50%{
+				 filter: hue-rotate(180deg);
+			 }
+			 100%{
+				 filter: hue-rotate(360deg);
+			 }
+		}
+	</style>
+	</head>
+	<body><div class="container">
+		<br>
+			<h1>Weight Calculator</h1>
+				<br>
+				<div class="jumbotron col-sm-6 col-sm-offset-3" style="background-color: slategrey" >
+				<h2>Calculate your Weight Here</h2><br>
+		<label>Enter your Weight : </label>	<input type="text" id="a1" size="4" maxlength="4"><br>
+		<br>
+		<label>Select the planet : </label>
+				<select id="a2" onclick="display();">
+						<option>Earth</option>
+						<option>Jupiter</option>
+						<option>Mercury</option>
+						<option>Venus</option>
+						<option>Mars</option>
+						<option>Sun</option>
+						<option>Saturn</option>
+						<option>Neptune</option>
+						<option>Uranus</option>
+						<option>Pluto</option>
+						<option>Moon</option>
+			</select><br><br>
+			
+		<label>Your Weight on selected planet : </label> 
+		<br><input type="text" id="a3">
+				</div>
+		
+	
+		</div>
+	</body>
+</html>
